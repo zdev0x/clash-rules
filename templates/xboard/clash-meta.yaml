@@ -37,9 +37,6 @@ dns:
 proxies:
 
 proxy-groups:
-  - name: "$app_name"
-    type: select
-    proxies: ["🚀 节点选择"]
 
   - name: "♻️ 自动选择"
     type: url-test
