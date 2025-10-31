@@ -49,19 +49,7 @@ proxy-groups:
     type: select
     proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
-  - name: "🤖 OpenAI"
-    type: select
-    proxies: ["🚀 节点选择", "DIRECT", ".*"]
-
-  - name: "🧠 Gemini"
-    type: select
-    proxies: ["🚀 节点选择", "DIRECT", ".*"]
-
-  - name: "💬 Claude"
-    type: select
-    proxies: ["🚀 节点选择", "DIRECT", ".*"]
-
-  - name: "🤖 Copilot"
+  - name: "🤖 AI 服务"
     type: select
     proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
@@ -263,10 +251,10 @@ rules:
   - RULE-SET,github,🐙 GitHub
   - RULE-SET,cursor,✨ Cursor
   - RULE-SET,docker,🐳 Docker
-  - RULE-SET,openai,🤖 OpenAI
-  - RULE-SET,gemini,🧠 Gemini
-  - RULE-SET,claude,💬 Claude
-  - RULE-SET,copilot,🤖 Copilot
+  - RULE-SET,openai,🤖 AI 服务
+  - RULE-SET,gemini,🤖 AI 服务
+  - RULE-SET,claude,🤖 AI 服务
+  - RULE-SET,copilot,🤖 AI 服务
 
   # Media
   - RULE-SET,overseas-media-netflix,📺 国外媒体
