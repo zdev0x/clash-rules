@@ -165,7 +165,7 @@ rule-providers:
   reject:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/BanAD.yaml"
     path: ./ruleset/reject.yaml
     interval: 86400
 

@@ -199,21 +199,21 @@ rule-providers:
   reject:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanAD.list"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/BanAD.yaml"
     path: ./ruleset/reject.yaml
     interval: 86400
 
   reject-cn:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanEasyListChina.list"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/BanEasyListChina.yaml"
     path: ./ruleset/reject_cn.yaml
     interval: 86400
 
   reject-app:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanProgramAD.list"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/BanProgramAD.yaml"
     path: ./ruleset/reject_app.yaml
     interval: 86400
 
