@@ -165,6 +165,9 @@ rules:
   # 本地直连
   - RULE-SET,direct,DIRECT
   - GEOIP,LAN,DIRECT
+  # 优先直连：.cn 域名与包含 -cn 的关键字
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
   - GEOIP,CN,DIRECT
 
   # 广告拦截

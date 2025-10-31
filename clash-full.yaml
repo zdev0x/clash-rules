@@ -248,6 +248,9 @@ rules:
   # Base direct
   - RULE-SET,direct,DIRECT
   - GEOIP,LAN,DIRECT
+  # Prefer direct for .cn domains and '-cn' keywords
+  - DOMAIN-SUFFIX,cn,🌐 全球直连
+  - DOMAIN-KEYWORD,-cn,🌐 全球直连
   - GEOIP,CN,🌐 全球直连
 
   # Adblock (order matters)
