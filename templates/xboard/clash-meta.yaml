@@ -132,10 +132,10 @@ rule-providers:
   gemini: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/gemini.yaml", path: ./ruleset/gemini.yaml, interval: 86400 }
   claude: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/claude.yaml", path: ./ruleset/claude.yaml, interval: 86400 }
   copilot: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/copilot.yaml", path: ./ruleset/copilot.yaml, interval: 86400 }
-  overseas-media-netflix: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Netflix.list", path: ./ruleset/overseas_media_netflix.yaml, interval: 86400 }
-  overseas-media-youtube: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/YouTube.list", path: ./ruleset/overseas_media_youtube.yaml, interval: 86400 }
-  overseas-media-disney: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/DisneyPlus.list", path: ./ruleset/overseas_media_disney.yaml, interval: 86400 }
-  overseas-media-spotify: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Spotify.list", path: ./ruleset/overseas_media_spotify.yaml, interval: 86400 }
+  overseas-media-netflix: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Netflix.yaml", path: ./ruleset/overseas_media_netflix.yaml, interval: 86400 }
+  overseas-media-youtube: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/YouTube.yaml", path: ./ruleset/overseas_media_youtube.yaml, interval: 86400 }
+  overseas-media-disney: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/DisneyPlus.yaml", path: ./ruleset/overseas_media_disney.yaml, interval: 86400 }
+  overseas-media-spotify: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Spotify.yaml", path: ./ruleset/overseas_media_spotify.yaml, interval: 86400 }
   binance: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/binance.yaml", path: ./ruleset/binance.yaml, interval: 86400 }
   google: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt", path: ./ruleset/google.yaml, interval: 86400 }
   apple: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt", path: ./ruleset/apple.yaml, interval: 86400 }

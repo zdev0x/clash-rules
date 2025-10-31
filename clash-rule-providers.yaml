@@ -57,28 +57,28 @@ rule-providers:
   overseas-media-netflix:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Netflix.list"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Netflix.yaml"
     path: ./ruleset/overseas_media_netflix.yaml
     interval: 86400
 
   overseas-media-youtube:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/YouTube.list"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/YouTube.yaml"
     path: ./ruleset/overseas_media_youtube.yaml
     interval: 86400
 
   overseas-media-disney:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/DisneyPlus.list"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/DisneyPlus.yaml"
     path: ./ruleset/overseas_media_disney.yaml
     interval: 86400
 
   overseas-media-spotify:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Spotify.list"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Spotify.yaml"
     path: ./ruleset/overseas_media_spotify.yaml
     interval: 86400
 
