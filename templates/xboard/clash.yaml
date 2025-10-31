@@ -114,7 +114,7 @@ rules:
   # Ecosystems
   - RULE-SET,google,🔎 Google
   - RULE-SET,apple,🍎 Apple
-  - RULE-SET,telegramcidr,✈️ Telegram
+  - RULE-SET,telegram,✈️ Telegram
   - RULE-SET,binance,💰 Binance
 
   # China routes
@@ -136,9 +136,9 @@ rule-providers:
   overseas-media-disney: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/DisneyPlus.yaml", path: ./ruleset/overseas_media_disney.yaml, interval: 86400 }
   overseas-media-spotify: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Spotify.yaml", path: ./ruleset/overseas_media_spotify.yaml, interval: 86400 }
   binance: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/binance.yaml", path: ./ruleset/binance.yaml, interval: 86400 }
-  google: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt", path: ./ruleset/google.yaml, interval: 86400 }
-  apple: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt", path: ./ruleset/apple.yaml, interval: 86400 }
-  telegramcidr: { type: http, behavior: ipcidr, url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt", path: ./ruleset/telegramcidr.yaml, interval: 86400 }
+  google: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Google.yaml", path: ./ruleset/google.yaml, interval: 86400 }
+  apple: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Apple.yaml", path: ./ruleset/apple.yaml, interval: 86400 }
+  telegram: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Telegram.yaml", path: ./ruleset/telegram.yaml, interval: 86400 }
   reject-custom: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/custom/reject.yaml", path: ./ruleset/reject_custom.yaml, interval: 86400 }
   reject: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/BanAD.yaml", path: ./ruleset/reject.yaml, interval: 86400 }
   reject-cn: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/BanEasyListChina.yaml", path: ./ruleset/reject_cn.yaml, interval: 86400 }

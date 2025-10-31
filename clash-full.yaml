@@ -170,22 +170,22 @@ rule-providers:
   google:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Google.yaml"
     path: ./ruleset/google.yaml
     interval: 86400
 
   apple:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Apple.yaml"
     path: ./ruleset/apple.yaml
     interval: 86400
 
-  telegramcidr:
+  telegram:
     type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./ruleset/telegramcidr.yaml
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Telegram.yaml"
+    path: ./ruleset/telegram.yaml
     interval: 86400
 
   # Adblock (slim)
@@ -220,7 +220,7 @@ rule-providers:
   direct:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/providers/custom/direct.yaml"
     path: ./ruleset/direct.yaml
     interval: 86400
 
@@ -265,7 +265,7 @@ rules:
   # Ecosystems
   - RULE-SET,google,🔎 Google
   - RULE-SET,apple,🍎 Apple
-  - RULE-SET,telegramcidr,✈️ Telegram
+  - RULE-SET,telegram,✈️ Telegram
   - RULE-SET,binance,💰 Binance
 
   # Final fallback

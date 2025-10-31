@@ -89,77 +89,27 @@ rule-providers:
     path: ./ruleset/binance.yaml
     interval: 86400
 
-  # ===== Optional: SkywalkerJi upstream YAML providers =====
-  # Switch rules to these names if you prefer upstream lists
-  # openai-skywalker:
-  #   type: http
-  #   behavior: classical
-  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/OpenAI.yaml"
-  #   path: ./ruleset/openai_skywalker.yaml
-  #   interval: 86400
-  #   format: yaml
-
-  # claude-skywalker:
-  #   type: http
-  #   behavior: classical
-  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/Anthropic.yaml"
-  #   path: ./ruleset/claude_skywalker.yaml
-  #   interval: 86400
-  #   format: yaml
-
-  # gemini-skywalker:
-  #   type: http
-  #   behavior: classical
-  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/Gemini.yaml"
-  #   path: ./ruleset/gemini_skywalker.yaml
-  #   interval: 86400
-  #   format: yaml
-
-  # cursor-skywalker:
-  #   type: http
-  #   behavior: classical
-  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/Cursor.yaml"
-  #   path: ./ruleset/cursor_skywalker.yaml
-  #   interval: 86400
-  #   format: yaml
-
-  # binance-skywalker:
-  #   type: http
-  #   behavior: classical
-  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/Crypto/Binance.yaml"
-  #   path: ./ruleset/binance_skywalker.yaml
-  #   interval: 86400
-  #   format: yaml
-
-  # 可选：直接引用 SkywalkerJi 的 YAML（如果可用）
-  # cursor-alt:
-  #   type: http
-  #   behavior: classical
-  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/Cursor.yaml"
-  #   path: ./ruleset/cursor-skywalker.yaml
-  #   interval: 86400
-  #   format: yaml
 
   # Loyalsoldier 基础规则
   google:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Google.yaml"
     path: ./ruleset/google.yaml
     interval: 86400
 
   apple:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Apple.yaml"
     path: ./ruleset/apple.yaml
     interval: 86400
 
-  telegramcidr:
+  telegram:
     type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./ruleset/telegramcidr.yaml
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Telegram.yaml"
+    path: ./ruleset/telegram.yaml
     interval: 86400
 
   reject:
@@ -178,7 +128,7 @@ rule-providers:
   direct:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/providers/custom/direct.yaml"
     path: ./ruleset/direct.yaml
     interval: 86400
 
@@ -219,7 +169,7 @@ rules:
   - RULE-SET,overseas-media-spotify,📺 国外媒体
   - RULE-SET,google,🔎 Google
   - RULE-SET,apple,🍎 Apple
-  - RULE-SET,telegramcidr,✈️ Telegram
+  - RULE-SET,telegram,✈️ Telegram
   - RULE-SET,binance,💰 Binance
 
   # 兜底：走 🐟 漏网之鱼（在主配置中定义该分组）
