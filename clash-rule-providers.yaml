@@ -53,6 +53,35 @@ rule-providers:
     path: ./ruleset/copilot.yaml
     interval: 86400
 
+  # 海外媒体（ACL4SSR 列表）
+  overseas-media-netflix:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Netflix.list"
+    path: ./ruleset/overseas_media_netflix.yaml
+    interval: 86400
+
+  overseas-media-youtube:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/YouTube.list"
+    path: ./ruleset/overseas_media_youtube.yaml
+    interval: 86400
+
+  overseas-media-disney:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/DisneyPlus.list"
+    path: ./ruleset/overseas_media_disney.yaml
+    interval: 86400
+
+  overseas-media-spotify:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Spotify.list"
+    path: ./ruleset/overseas_media_spotify.yaml
+    interval: 86400
+
   binance:
     type: http
     behavior: classical
@@ -182,6 +211,12 @@ rules:
   - RULE-SET,gemini,🧠 Gemini
   - RULE-SET,claude,💬 Claude
   - RULE-SET,copilot,🤖 Copilot
+
+  # Media
+  - RULE-SET,overseas-media-netflix,📺 国外媒体
+  - RULE-SET,overseas-media-youtube,📺 国外媒体
+  - RULE-SET,overseas-media-disney,📺 国外媒体
+  - RULE-SET,overseas-media-spotify,📺 国外媒体
   - RULE-SET,google,🔎 Google
   - RULE-SET,apple,🍎 Apple
   - RULE-SET,telegramcidr,✈️ Telegram
