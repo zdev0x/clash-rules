@@ -39,51 +39,51 @@ proxy-groups:
   # Service groups
   - name: "🐙 GitHub"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "✨ Cursor"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "🐳 Docker"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "🤖 OpenAI"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "🧠 Gemini"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "💬 Claude"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "🤖 Copilot"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "📺 国外媒体"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "🔎 Google"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "🍎 Apple"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "✈️ Telegram"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "💰 Binance"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
   - name: "🌐 全球直连"
     type: select

@@ -185,6 +185,6 @@ rules:
 # proxy-groups:
 #   - name: 🐙 GitHub
 #     type: select
-#     proxies: [🚀 节点选择, DIRECT]
+#     proxies: [🚀 节点选择, DIRECT, .*]
 #   ... 其他组
 
