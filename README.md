@@ -35,7 +35,10 @@ B) 直接导入 Clash 配置（rule-providers）
   - 自定义：`rulesets/custom/reject.list` 或 `providers/custom/reject.yaml`
   - ACL4SSR：BanAD/BanEasyListChina/BanProgramAD
   - Loyalsoldier：reject.txt
-- 🎯 漏网之鱼：`MATCH` 兜底（默认走“🚀 节点选择”）
+- 🐟 漏网之鱼：兜底流量分组
+  - subconverter：`ruleset=🐟 漏网之鱼,[]FINAL`（转换后等效 MATCH）
+  - rule-providers：`MATCH,🐟 漏网之鱼`
+  - 分组内包含：`🚀 节点选择`、`DIRECT` 与 `.*`（可直接选任意单节点）
 
 目录
 - `clash.ini`（subconverter）

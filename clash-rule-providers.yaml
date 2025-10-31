@@ -155,6 +155,13 @@ rule-providers:
 
 # 规则匹配顺序（保留你现有的规则组结构）
 rules:
+  # 显式直连：内网/回环/多播/链路本地
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,fe80::/10,DIRECT
   # 本地直连
   - RULE-SET,direct,DIRECT
   - GEOIP,LAN,DIRECT
@@ -177,8 +184,8 @@ rules:
   - RULE-SET,telegramcidr,✈️ Telegram
   - RULE-SET,binance,💰 Binance
 
-  # 兜底
-  - MATCH,🎯 漏网之鱼
+  # 兜底：走 🐟 漏网之鱼（在主配置中定义该分组）
+  - MATCH,🐟 漏网之鱼
 
 # 注意：此配置需要在你的 Clash 主配置中引入
 # proxy-groups 需要在主配置中定义，例如：

@@ -89,9 +89,9 @@ proxy-groups:
     type: select
     proxies: ["DIRECT"]
 
-  - name: "🎯 漏网之鱼"
+  - name: "🐟 漏网之鱼"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT"]
+    proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
 # ===== Rule Providers =====
 rule-providers:
@@ -238,6 +238,13 @@ rule-providers:
 
 # ===== Rules =====
 rules:
+  # Explicit LAN/loopback/multicast link-local
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,fe80::/10,DIRECT
   # Base direct
   - RULE-SET,direct,DIRECT
   - GEOIP,LAN,DIRECT
@@ -271,4 +278,4 @@ rules:
   - RULE-SET,binance,💰 Binance
 
   # Final fallback
-  - MATCH,🎯 漏网之鱼
+  - MATCH,🐟 漏网之鱼
