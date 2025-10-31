@@ -1,0 +1,6 @@
+; Add custom block entries here. Examples:
+; DOMAIN-SUFFIX,example-ads.com
+; DOMAIN,ads.example.org
+; DOMAIN-KEYWORD,tracker
+; IP-CIDR,1.2.3.4/32,no-resolve
+; IP-CIDR,5.6.0.0/16,no-resolve

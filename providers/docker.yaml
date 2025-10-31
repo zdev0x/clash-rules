@@ -1,0 +1,7 @@
+payload:
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,hub.docker.com
+  - DOMAIN-SUFFIX,auth.docker.io
+  - DOMAIN-SUFFIX,registry-1.docker.io
+  - DOMAIN-SUFFIX,cdn.docker.com
+  - DOMAIN-SUFFIX,quay.io

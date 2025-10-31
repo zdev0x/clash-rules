@@ -1,0 +1,190 @@
+# Clash 配置示例（rule-providers 模式）
+# 此文件展示如何通过 rule-providers 使用你的规则组
+# 需要替换 <你的代理组名称> 为实际的代理组名称
+
+rule-providers:
+  # 自定义规则组（从本仓库加载）
+  github:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/github.yaml"
+    path: ./ruleset/github.yaml
+    interval: 86400
+
+  cursor:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/cursor.yaml"
+    path: ./ruleset/cursor.yaml
+    interval: 86400
+
+  docker:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/docker.yaml"
+    path: ./ruleset/docker.yaml
+    interval: 86400
+
+  openai:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/openai.yaml"
+    path: ./ruleset/openai.yaml
+    interval: 86400
+
+  gemini:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/gemini.yaml"
+    path: ./ruleset/gemini.yaml
+    interval: 86400
+
+  claude:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/claude.yaml"
+    path: ./ruleset/claude.yaml
+    interval: 86400
+
+  copilot:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/copilot.yaml"
+    path: ./ruleset/copilot.yaml
+    interval: 86400
+
+  binance:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/binance.yaml"
+    path: ./ruleset/binance.yaml
+    interval: 86400
+
+  # ===== Optional: SkywalkerJi upstream YAML providers =====
+  # Switch rules to these names if you prefer upstream lists
+  # openai-skywalker:
+  #   type: http
+  #   behavior: classical
+  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/OpenAI.yaml"
+  #   path: ./ruleset/openai_skywalker.yaml
+  #   interval: 86400
+  #   format: yaml
+
+  # claude-skywalker:
+  #   type: http
+  #   behavior: classical
+  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/Anthropic.yaml"
+  #   path: ./ruleset/claude_skywalker.yaml
+  #   interval: 86400
+  #   format: yaml
+
+  # gemini-skywalker:
+  #   type: http
+  #   behavior: classical
+  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/Gemini.yaml"
+  #   path: ./ruleset/gemini_skywalker.yaml
+  #   interval: 86400
+  #   format: yaml
+
+  # cursor-skywalker:
+  #   type: http
+  #   behavior: classical
+  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/Cursor.yaml"
+  #   path: ./ruleset/cursor_skywalker.yaml
+  #   interval: 86400
+  #   format: yaml
+
+  # binance-skywalker:
+  #   type: http
+  #   behavior: classical
+  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/Crypto/Binance.yaml"
+  #   path: ./ruleset/binance_skywalker.yaml
+  #   interval: 86400
+  #   format: yaml
+
+  # 可选：直接引用 SkywalkerJi 的 YAML（如果可用）
+  # cursor-alt:
+  #   type: http
+  #   behavior: classical
+  #   url: "https://raw.githubusercontent.com/SkywalkerJi/Clash-Rules/refs/heads/master/AI/Cursor.yaml"
+  #   path: ./ruleset/cursor-skywalker.yaml
+  #   interval: 86400
+  #   format: yaml
+
+  # Loyalsoldier 基础规则
+  google:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+  reject:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  reject-custom:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/custom/reject.yaml"
+    path: ./ruleset/reject_custom.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+# 规则匹配顺序（保留你现有的规则组结构）
+rules:
+  # 本地直连
+  - RULE-SET,direct,DIRECT
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+
+  # 广告拦截
+  - RULE-SET,reject-custom,REJECT
+  - RULE-SET,reject,REJECT
+
+  # 应用优先规则组（按你现有的顺序）
+  - RULE-SET,github,🐙 GitHub
+  - RULE-SET,cursor,✨ Cursor
+  - RULE-SET,docker,🐳 Docker
+  - RULE-SET,openai,🤖 OpenAI
+  - RULE-SET,gemini,🧠 Gemini
+  - RULE-SET,claude,💬 Claude
+  - RULE-SET,copilot,🤖 Copilot
+  - RULE-SET,google,🔎 Google
+  - RULE-SET,apple,🍎 Apple
+  - RULE-SET,telegramcidr,✈️ Telegram
+  - RULE-SET,binance,💰 Binance
+
+  # 兜底
+  - MATCH,🎯 漏网之鱼
+
+# 注意：此配置需要在你的 Clash 主配置中引入
+# proxy-groups 需要在主配置中定义，例如：
+# proxy-groups:
+#   - name: 🐙 GitHub
+#     type: select
+#     proxies: [🚀 节点选择, DIRECT]
+#   ... 其他组
+
