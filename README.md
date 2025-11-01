@@ -16,6 +16,8 @@ A) 通过 subconverter 生成配置（推荐给已有转换服务）
 https://HOST/sub?url=你的订阅URL&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fzdev0x%2Fclash-rules%40release%2Fclash.ini
 ```
 
+> **注意**：`clash.ini` 模式（subconverter）不再支持自动更新 direct 相关规则。如需自动更新功能，请使用 B) 方式（rule-providers 模式）。
+
 B) 直接导入 Clash 配置（rule-providers）
 下载并导入：`clash-full.yaml`
 - 包含 rule-providers、rules、proxy-groups 占位（需自行填入节点）
