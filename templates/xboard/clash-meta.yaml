@@ -43,7 +43,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 100
-    proxies: ["DIRECT"]
+    proxies: []
 
   - name: "🔧 手动选择"
     type: select
@@ -58,13 +58,14 @@ proxy-groups:
 
   # Service groups (app-priority), allow direct node selection via ".*"
   - { name: "🐙 GitHub", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
-  - { name: "✨ Cursor", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
-  - { name: "🐳 Docker", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
-  - { name: "🤖 AI 服务", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
-  - { name: "📺 国外媒体", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
-  - { name: "🔎 Google", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
+  - { name: "✨ Cursor", type: select, proxies: ["🚀 节点选择"] }
+  - { name: "🐳 Docker", type: select, proxies: ["🚀 节点选择"] }
+  - { name: "🤖 AI 服务", type: select, proxies: ["🚀 节点选择"] }
+  - { name: "📺 国外媒体", type: select, proxies: ["🚀 节点选择"] }
+  - { name: "🔎 Google", type: select, proxies: ["🚀 节点选择"] }
   - { name: "🍎 Apple", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
-  - { name: "✈️ Telegram", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
+  - { name: "💻 Microsoft", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
+  - { name: "✈️ Telegram", type: select, proxies: ["🚀 节点选择"] }
   - { name: "💰 Binance", type: select, proxies: ["🚀 节点选择", "DIRECT"] }
 
   - name: "🌐 全球直连"
@@ -76,6 +77,8 @@ proxy-groups:
     proxies: ["🚀 节点选择", "DIRECT"]
 
 rules:
+  # 国内AI
+  - DOMAIN-SUFFIX,qwen.ai,DIRECT
   # Explicit LAN/loopback/multicast link-local
   - IP-CIDR,127.0.0.0/8,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
@@ -115,6 +118,7 @@ rules:
   # Ecosystems
   - RULE-SET,google,🔎 Google
   - RULE-SET,apple,🍎 Apple
+  - RULE-SET,microsoft,💻 Microsoft
   - RULE-SET,telegram,✈️ Telegram
   - RULE-SET,binance,💰 Binance
 
@@ -139,6 +143,7 @@ rule-providers:
   binance: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/binance.yaml", path: ./ruleset/binance.yaml, interval: 86400 }
   google: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Google.yaml", path: ./ruleset/google.yaml, interval: 86400 }
   apple: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Apple.yaml", path: ./ruleset/apple.yaml, interval: 86400 }
+  microsoft: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Microsoft.yaml", path: ./ruleset/microsoft.yaml, interval: 86400 }
   telegram: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Telegram.yaml", path: ./ruleset/telegram.yaml, interval: 86400 }
   reject-custom: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/zdev0x/clash-rules@release/providers/custom/reject.yaml", path: ./ruleset/reject_custom.yaml, interval: 86400 }
   reject: { type: http, behavior: classical, url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/BanAD.yaml", path: ./ruleset/reject.yaml, interval: 86400 }

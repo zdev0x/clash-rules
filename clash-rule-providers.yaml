@@ -89,6 +89,12 @@ rule-providers:
     path: ./ruleset/binance.yaml
     interval: 86400
 
+  microsoft:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Microsoft.yaml"
+    path: ./ruleset/microsoft.yaml
+    interval: 86400
 
   # Loyalsoldier 基础规则
   google:
@@ -134,6 +140,9 @@ rule-providers:
 
 # 规则匹配顺序（保留你现有的规则组结构）
 rules:
+
+  # 国内AI
+  - DOMAIN-SUFFIX,qwen.ai,DIRECT
   # 显式直连：内网/回环/多播/链路本地
   - IP-CIDR,127.0.0.0/8,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
@@ -169,6 +178,7 @@ rules:
   - RULE-SET,overseas-media-spotify,📺 国外媒体
   - RULE-SET,google,🔎 Google
   - RULE-SET,apple,🍎 Apple
+  - RULE-SET,microsoft,💻 Microsoft
   - RULE-SET,telegram,✈️ Telegram
   - RULE-SET,binance,💰 Binance
 

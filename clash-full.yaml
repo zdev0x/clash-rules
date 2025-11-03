@@ -23,7 +23,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 100
-    proxies: ["DIRECT"]
+    proxies: []
 
   - name: "🔧 手动选择"
     type: select
@@ -43,7 +43,7 @@ proxy-groups:
 
   - name: "✨ Cursor"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT", ".*"]
+    proxies: ["🚀 节点选择", ".*"]
 
   - name: "🐳 Docker"
     type: select
@@ -55,19 +55,23 @@ proxy-groups:
 
   - name: "📺 国外媒体"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT", ".*"]
+    proxies: ["🚀 节点选择", ".*"]
 
   - name: "🔎 Google"
     type: select
-    proxies: ["🚀 节点选择", "DIRECT", ".*"]
+    proxies: ["🚀 节点选择", ".*"]
 
   - name: "🍎 Apple"
     type: select
     proxies: ["🚀 节点选择", "DIRECT", ".*"]
 
-  - name: "✈️ Telegram"
+  - name: "💻 Microsoft"
     type: select
     proxies: ["🚀 节点选择", "DIRECT", ".*"]
+
+  - name: "✈️ Telegram"
+    type: select
+    proxies: ["🚀 节点选择", ".*"]
 
   - name: "💰 Binance"
     type: select
@@ -181,6 +185,13 @@ rule-providers:
     path: ./ruleset/apple.yaml
     interval: 86400
 
+  microsoft:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/Ruleset/Microsoft.yaml"
+    path: ./ruleset/microsoft.yaml
+    interval: 86400
+
   telegram:
     type: http
     behavior: classical
@@ -226,6 +237,8 @@ rule-providers:
 
 # ===== Rules =====
 rules:
+  # 国内AI
+  - DOMAIN-SUFFIX,qwen.ai,DIRECT
   # Explicit LAN/loopback/multicast link-local
   - IP-CIDR,127.0.0.0/8,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
@@ -265,6 +278,7 @@ rules:
   # Ecosystems
   - RULE-SET,google,🔎 Google
   - RULE-SET,apple,🍎 Apple
+  - RULE-SET,microsoft,💻 Microsoft
   - RULE-SET,telegram,✈️ Telegram
   - RULE-SET,binance,💰 Binance
 
