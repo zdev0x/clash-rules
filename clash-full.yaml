@@ -267,7 +267,7 @@ rules:
   - RULE-SET,openai,🤖 AI 服务
   - RULE-SET,gemini,🤖 AI 服务
   - RULE-SET,claude,🤖 AI 服务
-  - RULE-SET,copilot,🤖 AI 服务
+  # - RULE-SET,copilot,🤖 AI 服务
 
   # Media
   - RULE-SET,overseas-media-netflix,📺 国外媒体
